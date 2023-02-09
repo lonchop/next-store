@@ -27,7 +27,7 @@ export default function ShoppingCart() {
       }`}
     >
       <button
-        className="inline-flex items-center rounded-[8px] bg-secondary px-[20px] py-[8px] text-center text-[1.6rem] font-semibold text-black select-none"
+        className="inline-flex select-none items-center rounded-[8px] bg-secondary px-[20px] py-[8px] text-center text-[1.6rem] font-semibold text-black"
         onClick={handleClickClose}
       >
         Close
