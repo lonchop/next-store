@@ -9,7 +9,7 @@ export default function ButtonRemoveCart({
   return (
     <div>
       <button
-        className="mt-[5px] mr-[5px] flex h-[25px] w-[25px] items-center justify-center rounded-lg bg-negative"
+        className="mt-[5px] mr-[5px] flex h-[25px] w-[25px] items-center justify-center rounded-lg bg-negative select-none"
         onClick={handleClick}
       >
         <Image src={remove} alt="icon" className="h-[20px] w-[20px] " />

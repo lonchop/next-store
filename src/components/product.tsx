@@ -33,7 +33,7 @@ export default function Product({
     case "Page":
       return (
         <div className="flex h-auto w-full bg-white px-[50px]">
-          <div className="flex w-[50%] items-start justify-center">
+          <div className="flex w-[50%] items-start justify-center select-none">
             <Image
               className="h-[380px] w-[380px]"
               src={item.image}
@@ -59,7 +59,7 @@ export default function Product({
       return (
         <div className={`flex flex-col items-center`}>
           <div className="w-[150px] bg-white">
-            <div className="mb-[10px] flex h-[150px] items-center justify-center rounded-[6px] shadow-nav-shadow">
+            <div className="mb-[10px] flex h-[150px] items-center justify-center rounded-[6px] shadow-nav-shadow select-none">
               <Image
                 className="h-[80px] w-[80px]"
                 src={item.image}
@@ -103,7 +103,7 @@ export default function Product({
     default:
       return (
         <div className="w-[300px] bg-white">
-          <div className="mb-[10px] flex h-[300px] items-center justify-center rounded-[6px] shadow-nav-shadow">
+          <div className="mb-[10px] flex h-[300px] items-center justify-center rounded-[6px] shadow-nav-shadow select-none">
             <Link href={`/store/${convertToPath(item.title)}`}>
               <Image
                 className="h-[250px] w-[250px]"

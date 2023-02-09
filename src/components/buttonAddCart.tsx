@@ -6,7 +6,7 @@ export default function ButtonAddCart({
   return (
     <div>
       <button
-        className="mb-[15px] inline-flex items-center rounded-lg bg-primary-2 px-[20px] py-[10px] text-center text-[1.8rem] font-medium text-white"
+        className="mb-[15px] inline-flex items-center rounded-lg bg-primary-2 px-[20px] py-[10px] text-center text-[1.8rem] font-medium text-white select-none"
         onClick={handleClick}
       >
         Add to the cart

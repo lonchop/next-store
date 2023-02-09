@@ -27,7 +27,7 @@ export default function ShoppingCart() {
       }`}
     >
       <button
-        className="inline-flex items-center rounded-[8px] bg-secondary px-[20px] py-[8px] text-center text-[1.6rem] font-semibold text-black"
+        className="inline-flex items-center rounded-[8px] bg-secondary px-[20px] py-[8px] text-center text-[1.6rem] font-semibold text-black select-none"
         onClick={handleClickClose}
       >
         Close
@@ -40,7 +40,7 @@ export default function ShoppingCart() {
       ) : (
         <div className="flex w-full flex-col items-center">
           <h3 className="my-[20px] text-[1.8rem] font-semibold">Your items</h3>
-          <div className="">
+          <div>
             {cart.items &&
               cart.items.length > 0 &&
               cart.items.map((item, i) => (

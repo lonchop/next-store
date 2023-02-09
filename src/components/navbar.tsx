@@ -36,7 +36,10 @@ export default function Navbar() {
               className="rounded-[10px] p-[5px] hover:bg-primary-1 lg:p-[10px]"
               key={link.route}
             >
-              <Link className="p-[5px] lg:p-[10px]" href={link.route}>
+              <Link
+                className="select-none p-[5px] lg:p-[10px]"
+                href={link.route}
+              >
                 {link.label}
               </Link>
             </li>
@@ -45,7 +48,7 @@ export default function Navbar() {
 
         <div className="flex w-[80px] items-center justify-center rounded-[20px] border-[2px] border-primary-1 bg-white shadow-nav-shadow">
           <Link href="#" onClick={handleClickCart}>
-            <div className="flex h-[80px] w-[80px] items-center justify-center">
+            <div className="flex h-[80px] w-[80px] items-center justify-center select-none">
               <div className="absolute right-[-5px] top-[-5px] flex h-[25px] w-[25px] items-center justify-center rounded-full bg-primary-1">
                 <span className="text-[1.4rem] font-medium text-white">
                   {cart.getNumberOfItems()}
