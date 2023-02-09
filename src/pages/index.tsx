@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       <h3 className="mb-[10px] text-[2rem] font-medium">Latest Products</h3>
-      <div className="mb-[30px] grid grid-cols-3 gap-x-[40px]">
+      <div className="mb-[30px] grid-cols-none lg:grid lg:grid-cols-3 gap-x-[40px]">
         {items &&
           items
             .slice(0, 3)

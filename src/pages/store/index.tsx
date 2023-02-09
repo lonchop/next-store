@@ -2,14 +2,14 @@ import Layout from "@/components/layout";
 import Product from "@/components/product";
 import { useQuery } from "react-query";
 import { getItems } from "@/services/storeService";
-import { Items, Item } from "@/types";
+import { Items } from "@/types";
 
 export default function Index() {
   const { data: items } = useQuery<Items[], Error>("products", getItems);
 
   return (
     <Layout title="Store">
-      <div className="mb-[30px] grid grid-cols-3 gap-[40px]">
+      <div className="mb-[30px] grid-cols-none lg:grid lg:grid-cols-3 gap-[40px]">
         {items &&
           items.map((item: any) => (
             <Product key={item.id} item={item} showAs="item" qty={0} />
