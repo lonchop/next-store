@@ -25,7 +25,7 @@ export default function Layout({
       </Head>
       <div className={`${font.className} bg-white`}>
         <Navbar />
-        <div className="w-full mx-auto flex flex-col items-center">
+        <div className="mx-auto flex w-full flex-col items-center">
           {children}
         </div>
         <ShoppingCart />

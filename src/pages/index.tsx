@@ -3,9 +3,7 @@ import Product from "@/components/product";
 import Carousel from "@/components/carousel";
 import { useQuery } from "react-query";
 import { getItems } from "@/services/storeService";
-import { Items } from "@/types"
-
-
+import { Items } from "@/types";
 
 export default function Home() {
   const { data: items } = useQuery<Items[], Error>("products", getItems);
@@ -19,9 +17,9 @@ export default function Home() {
       <h3 className="mb-[10px] text-[2rem] font-medium">Latest Products</h3>
       <div className="mb-[30px] grid grid-cols-3 gap-x-[40px]">
         {items &&
-          items.slice(0, 3).map((item) => (
-            <Product key={item.id} item={item} showAs="item" />
-          ))}
+          items
+            .slice(0, 3)
+            .map((item) => <Product key={item.id} item={item} showAs="item" />)}
       </div>
     </Layout>
   );

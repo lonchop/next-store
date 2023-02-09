@@ -46,15 +46,15 @@ export default function Carousel() {
 
   return (
     <>
-      <div className="flex h-screen w-[95%] flex-row flex-nowrap justify-center">
-        <div className="absolute h-screen w-[95%]">
+      <div className="flex h-screen w-full flex-row flex-nowrap justify-center lg:w-[95%]">
+        <div className="absolute h-screen w-full lg:w-[95%]">
           <div
-            className={`absolute h-screen w-full rounded-[2px] bg-cover ${carousel[contador]} transition-all duration-300 ease-out brightness-50`}
+            className={`absolute h-screen w-full rounded-[2px] bg-cover ${carousel[contador]} brightness-50 transition-all duration-300 ease-out`}
           ></div>
 
           <div className="absolute h-screen w-full">
-            <div className="w-[60%] p-[100px]">
-              <h2 className="mt-[40px] mb-[30px] text-[5rem] font-bold text-white">
+            <div className="w-[100%] p-[20px] pt-[100px] lg:w-[60%] lg:p-[100px]">
+              <h2 className="mt-[40px] mb-[30px] text-[4rem] font-bold text-white lg:text-[5rem]">
                 Shop the Winter 2023 Collection
               </h2>
               <p className="text-[1.6rem] text-white">
@@ -68,14 +68,14 @@ export default function Carousel() {
           <div className="absolute top-[50%] m-auto my-0 w-full lg:top-[50%]">
             <button
               onClick={() => previousClick()}
-              className="absolute left-0 flex h-10 w-10 items-center justify-center rounded-[4px] transition duration-300 ease-in-out lg:h-[40px] lg:w-[40px]"
+              className="absolute left-0 hidden h-10 w-10 items-center justify-center rounded-[4px] transition duration-300 ease-in-out lg:flex lg:h-[40px] lg:w-[40px]"
             >
               <Image src={images.icon[0].img} alt={images.icon[0].alt} />
             </button>
 
             <button
               onClick={() => nextClick()}
-              className="absolute right-0 flex h-10 w-10 items-center justify-center rounded-[4px] transition duration-300 ease-in-out lg:h-[40px] lg:w-[40px]"
+              className="absolute right-0 hidden h-10 w-10 items-center justify-center rounded-[4px] transition duration-300 ease-in-out lg:flex lg:h-[40px] lg:w-[40px]"
             >
               <Image src={images.icon[1].img} alt={images.icon[1].alt} />
             </button>

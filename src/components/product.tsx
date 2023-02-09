@@ -4,7 +4,7 @@ import { convertToPath } from "@/lib/utils";
 import { useAppContext } from "@/components/stateWrapper";
 import ButtonAddCart from "@/components/buttonAddCart";
 import ButtonRemoveCart from "./buttonRemoveCart";
-import { Item } from "@/types"
+import { Item } from "@/types";
 
 export default function Product({
   item,

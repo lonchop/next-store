@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useAppContext } from "@/components/stateWrapper";
 import mbCart from "../.././public/img/mb-cart.svg";
 import React from "react";
-import { Links } from "@/types"
+import { Links } from "@/types";
 
 const links: Links[] = [
   {
@@ -28,15 +28,15 @@ export default function Navbar() {
     cart.handleCart();
   }
   return (
-    <div className="mt-[30px] mb-[30px] mx-auto flex h-[80px] w-[90%] justify-center bg-white">
+    <div className="mx-auto mt-[30px] mb-[30px] flex h-[80px] w-[90%] justify-center bg-white">
       <nav className="fixed z-[1] flex w-[90%] gap-[20px] ">
-        <ul className="flex w-[100%] items-center justify-center gap-4 rounded-[20px] bg-white shadow-nav-shadow text-[1.8rem] font-medium">
+        <ul className="flex w-[100%] items-center justify-center rounded-[20px] bg-white text-[1.8rem] font-medium shadow-nav-shadow lg:gap-4">
           {links.map((link) => (
             <li
-              className="rounded-[10px] p-[10px] hover:bg-primary-1"
+              className="rounded-[10px] p-[5px] hover:bg-primary-1 lg:p-[10px]"
               key={link.route}
             >
-              <Link className="p-[10px]" href={link.route}>
+              <Link className="p-[5px] lg:p-[10px]" href={link.route}>
                 {link.label}
               </Link>
             </li>
@@ -47,16 +47,11 @@ export default function Navbar() {
           <Link href="#" onClick={handleClickCart}>
             <div className="flex h-[80px] w-[80px] items-center justify-center">
               <div className="absolute right-[-5px] top-[-5px] flex h-[25px] w-[25px] items-center justify-center rounded-full bg-primary-1">
-                <span className="text-[1.4rem] text-white font-medium">
+                <span className="text-[1.4rem] font-medium text-white">
                   {cart.getNumberOfItems()}
                 </span>
               </div>
-              <Image
-                height={40}
-                width={40}
-                src={mbCart}
-                alt="shopping cart"
-              />
+              <Image height={40} width={40} src={mbCart} alt="shopping cart" />
             </div>
           </Link>
         </div>

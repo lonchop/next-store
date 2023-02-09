@@ -1,10 +1,10 @@
 import Product from "@/components/product";
 import { useAppContext } from "@/components/stateWrapper";
 import styles from "../../styles/animation.module.css";
-import { Context } from "@/types"
+import { Context } from "@/types";
 
 export default function ShoppingCart() {
-  const cart: Context  = useAppContext();
+  const cart: Context = useAppContext();
 
   function getTotal() {
     const total = cart.items.reduce((acc, item) => {
@@ -20,7 +20,10 @@ export default function ShoppingCart() {
   return (
     <div
       className={`fixed top-0 left-0 z-[2] h-full w-[350px] flex-col items-end overflow-y-scroll bg-white py-[30px] px-[20px] shadow-nav-shadow ${
-        cart.isOpen ? `flex ${styles.slideInLeft}` : `flex`
+        cart.isOpen
+          ? `flex ${styles.slideInLeft}`
+          : `hidden ${styles.slideOutLeft}`
+      }
       }`}
     >
       <button

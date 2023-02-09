@@ -3,7 +3,7 @@ import Layout from "@/components/layout";
 export default function FAQ() {
   return (
     <Layout title="FAQ">
-      <div className="w-[80ch] h-auto mb-[30px]">
+      <div className="w-full px-[20px] lg:px-0 lg:w-[80ch] h-auto mb-[30px]">
         <h2 className="text-[4rem] font-bold">FAQ</h2>
         
         <div>
