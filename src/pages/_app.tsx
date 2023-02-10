@@ -1,10 +1,7 @@
 import StateWrapper from "@/components/stateWrapper";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "react-query";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import { ReactQueryDevtoolsPanel } from 'react-query/devtools'
+import { ReactQueryDevtoolsPanel } from "react-query/devtools";
 
 import "../../styles/globals.css";
 
@@ -15,9 +12,17 @@ function MyApp({ Component, pageProps }: any) {
     <QueryClientProvider client={queryClient}>
       <StateWrapper>
         <Component {...pageProps} />
-        <ReactQueryDevtools initialIsOpen={false}/>
-        {/* <ReactQueryDevtoolsPanel setIsOpen /> */}
       </StateWrapper>
+      <ReactQueryDevtools
+        initialIsOpen={true}
+        position="top-left"
+        // panelProps={{
+        //   style: {
+        //     height: "60%",
+        //   },
+        // }}
+      />
+      {/* <ReactQueryDevtoolsPanel setIsOpen /> */}
     </QueryClientProvider>
   );
 }

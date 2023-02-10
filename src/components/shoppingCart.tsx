@@ -19,7 +19,7 @@ export default function ShoppingCart() {
 
   return (
     <div
-      className={`fixed top-0 left-0 z-[2] h-full w-[350px] flex-col items-end overflow-y-scroll bg-white py-[30px] px-[20px] shadow-nav-shadow ${
+      className={`fixed top-0 left-0 z-[2] h-full w-full lg:w-[350px] flex-col items-end overflow-y-scroll bg-white py-[30px] px-[20px] shadow-nav-shadow ${
         cart.isOpen
           ? `flex ${styles.slideInLeft}`
           : `hidden ${styles.slideOutLeft}`

@@ -32,10 +32,10 @@ export default function Product({
   switch (showAs) {
     case "Page":
       return (
-        <div className="flex h-auto w-full bg-white px-[50px]">
-          <div className="flex w-full lg:w-[50%] select-none items-start justify-center">
+        <div className="flex h-auto w-full flex-wrap bg-white lg:px-[50px]">
+          <div className="hidden w-full select-none justify-center lg:flex lg:w-[50%] lg:items-start">
             <Image
-              className="h-[380px] w-[380px]"
+              className="lg:h-[380px] lg:w-[380px]"
               src={item.image}
               alt="Picture of the author"
               width={600}
@@ -43,13 +43,26 @@ export default function Product({
             />
           </div>
 
-          <div className="flex w-[50%] flex-col justify-center gap-[15px]">
-            <div>
-              <h2 className="text-[3.2rem]">{item.title}</h2>
+          <div className="flex w-full flex-col justify-center gap-[15px] lg:w-[50%]">
+            <div className="flex justify-center mx-[20px] lg:mx-0">
+              <h2 className="text-center text-[2.0rem] font-semibold lg:text-left lg:text-[3.2rem] lg:font-normal">
+                {item.title}
+              </h2>
             </div>
-            <p className="my-[10px] text-[2.5rem]">${item.price}</p>
-            <p className="text-[1.4rem]">{item.description}</p>
-            <div>
+            <div className="flex w-full select-none justify-center lg:hidden">
+              <Image
+                className="h-[250px] w-[250px]"
+                src={item.image}
+                alt="Picture of the author"
+                width={600}
+                height={600}
+              />
+            </div>
+            <div className="flex flex-col items-center justify-center lg:justify-start lg:items-start mx-[20px] lg:mx-0">
+              <p className="my-[10px] text-[2.5rem]">${item.price}</p>
+              <p className="text-[1.4rem]">{item.description}</p>
+            </div>
+            <div className="flex justify-center lg:justify-start">
               <ButtonAddCart handleClick={addToCart} />
             </div>
           </div>
@@ -102,7 +115,7 @@ export default function Product({
       );
     default:
       return (
-        <div className="w-[300px] bg-white">
+        <div className="mb-[60px] w-[300px] bg-white lg:mb-[20px]">
           <div className="mb-[10px] flex h-[300px] select-none items-center justify-center rounded-[6px] shadow-nav-shadow">
             <Link href={`/store/${convertToPath(item.title)}`}>
               <Image
