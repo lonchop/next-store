@@ -2,6 +2,7 @@ import Product from "@/components/product";
 import { useAppContext } from "@/components/stateWrapper";
 import styles from "../../styles/animation.module.css";
 import { Context } from "@/types";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 export default function ShoppingCart() {
   const cart: Context = useAppContext();
@@ -19,7 +20,7 @@ export default function ShoppingCart() {
 
   return (
     <div
-      className={`fixed top-0 left-0 z-[2] h-full w-full lg:w-[350px] flex-col items-end overflow-y-scroll bg-white py-[30px] px-[20px] shadow-nav-shadow ${
+      className={`fixed top-0 left-0 z-[2] h-full w-full flex-col items-end overflow-y-scroll bg-white py-[30px] px-[20px] shadow-nav-shadow lg:w-[350px] ${
         cart.isOpen
           ? `flex ${styles.slideInLeft}`
           : `hidden ${styles.slideOutLeft}`
@@ -53,6 +54,9 @@ export default function ShoppingCart() {
               ))}
           </div>
           <div className="text-[2rem]">Total: ${getTotal().toFixed(2)}</div>
+          <PayPalScriptProvider options={{ "client-id": "test" }}>
+            <PayPalButtons style={{ layout: "vertical", color: "blue" }} />
+          </PayPalScriptProvider>
         </div>
       )}
     </div>
