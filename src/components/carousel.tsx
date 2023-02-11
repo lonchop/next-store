@@ -53,8 +53,8 @@ export default function Carousel() {
             className={`absolute h-screen w-full rounded-[2px] bg-cover ${carousel[contador]} brightness-50 transition-all duration-300 ease-out`}
           ></div>
 
-          <div className="absolute h-screen w-full">
-            <div className="w-[100%] p-[20px] pt-[100px] lg:w-[60%] lg:p-[100px]">
+          <div className="absolute h-screen w-full flex flex-col justify-center lg:justify-start">
+            <div className="w-[100%] p-[20px] lg:w-[60%] lg:p-[100px]">
               <h2 className="mt-[40px] mb-[30px] text-[4rem] font-bold text-white lg:text-[5rem]">
                 Shop the Winter 2023 Collection
               </h2>

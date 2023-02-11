@@ -28,7 +28,15 @@ export default function Navbar() {
   }
   return (
     <div className="mx-auto mt-[30px] mb-[30px] flex h-[80px] w-[90%] justify-center bg-white">
-      <nav className="fixed z-[1] flex w-[90%] gap-[20px] ">
+      <nav className="fixed z-[1] flex w-[90%] gap-[20px]">
+        <div className="flex flex-col items-center justify-center">
+          <h3 className="select-none text-[1.4rem]">Mode</h3>
+          <input
+            type="checkbox"
+            className=" h-[20px] w-[40px] cursor-pointer appearance-none rounded-full bg-gray-200  transition-all duration-300 before:ml-0.5 before:inline-block before:h-[20px] before:w-[20px] before:rounded-full before:bg-black checked:bg-primary-1 checked:before:translate-x-full focus:outline-none"
+          />
+        </div>
+
         <ul className="flex w-[100%] items-center justify-center rounded-[20px] bg-white text-[1.8rem] font-medium shadow-nav-shadow lg:gap-4">
           {links.map((link) => (
             <li
