@@ -6,6 +6,11 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ["localhost", "cdn.shopify.com", "fakestoreapi.com"],
+    domains: [
+      "localhost",
+      "cdn.shopify.com",
+      "fakestoreapi.com",
+      "peticiones.online",
+    ],
   },
 };

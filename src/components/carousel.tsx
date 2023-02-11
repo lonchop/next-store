@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import images from "../images";
 import { IoChevronBackOutline } from "react-icons/io5";
 import { IoChevronForwardOutline } from "react-icons/io5";
@@ -72,7 +71,6 @@ export default function Carousel() {
               onClick={() => previousClick()}
               className="absolute left-0 hidden h-10 w-10 select-none items-center justify-center rounded-[4px] transition duration-300 ease-in-out lg:flex lg:h-[40px] lg:w-[40px]"
             >
-              {/* <Image src={images.icon[0].img} alt={images.icon[0].alt} /> */}
               <IoChevronBackOutline className="h-[50px] w-[50px] text-white" />
             </button>
 
@@ -80,7 +78,6 @@ export default function Carousel() {
               onClick={() => nextClick()}
               className="absolute right-0 hidden h-10 w-10 select-none items-center justify-center rounded-[4px] transition duration-300 ease-in-out lg:flex lg:h-[40px] lg:w-[40px]"
             >
-              {/* <Image src={images.icon[1].img} alt={images.icon[1].alt} /> */}
               <IoChevronForwardOutline
                 className="h-[50px] w-[50px] 
               text-white"

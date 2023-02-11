@@ -46,7 +46,7 @@ export default function Product({
           <div className="flex w-full flex-col justify-center gap-[15px] lg:w-[50%]">
             <div className="flex justify-center mx-[20px] lg:mx-0">
               <h2 className="text-center text-[2.0rem] font-semibold lg:text-left lg:text-[3.2rem] lg:font-normal">
-                {item.title}
+                {item.name}
               </h2>
             </div>
             <div className="flex w-full select-none justify-center lg:hidden">
@@ -117,7 +117,7 @@ export default function Product({
       return (
         <div className="mb-[60px] w-[300px] bg-white lg:mb-[20px]">
           <div className="mb-[10px] flex h-[300px] select-none items-center justify-center rounded-[6px] shadow-nav-shadow">
-            <Link href={`/store/${convertToPath(item.title)}`}>
+            <Link href={`/store/${convertToPath(item.name)}`}>
               <Image
                 className="h-[250px] w-[250px]"
                 src={item.image}
@@ -130,8 +130,8 @@ export default function Product({
           <div className="mx-[10px] flex flex-col items-center">
             <div className="flex h-[100px] items-center">
               <p className="text-[1.6rem] font-medium">
-                <Link href={`/store/${convertToPath(item.title)}`}>
-                  {item.title}
+                <Link href={`/store/${convertToPath(item.name)}`}>
+                  {item.name}
                 </Link>
               </p>
             </div>

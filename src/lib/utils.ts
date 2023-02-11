@@ -7,7 +7,7 @@ export async function getPathsFromTitle() {
   return items.map((item) => {
     return {
       params: {
-        id: convertToPath(item.title),
+        id: convertToPath(item.name),
       },
     };
   });
@@ -15,13 +15,13 @@ export async function getPathsFromTitle() {
 
 export async function getItemData(id: string) {
   const items: Items[] = await getItems();
-  const product = items.find((item) => convertToPath(item.title) === id);
+  const product = items.find((item) => convertToPath(item.name) === id);
   return {
     id,
     data: product,
   };
 }
 
-export function convertToPath(title: string) {
-  return title.toLowerCase().replace(/\s/g, "-");
+export function convertToPath(name: string) {
+  return name.toLowerCase().replace(/\s/g, "-");
 }

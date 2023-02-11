@@ -1,21 +1,32 @@
 // Este archivo solamente puede tener definiciones
 
+// export interface Items {
+//   id: number;
+//   title: string;
+//   price: number;
+//   description: string;
+//   category: string;
+//   image: string;
+//   rating: {
+//     rate: number;
+//     count: number;
+//   };
+//   qty: number;
+// }
+
 export interface Items {
+  _id: string;
   id: number;
-  title: string;
-  price: number;
+  name: string;
   description: string;
+  price: number;
   category: string;
   image: string;
-  rating: {
-    rate: number;
-    count: number;
-  };
+  active: boolean;
   qty: number;
-
 }
 
-interface Item extends Items{
+interface Item extends Items {
   qty: number;
 }
 
@@ -38,3 +49,4 @@ export interface Links {
 export interface Props {
   items: Items[];
 }
+

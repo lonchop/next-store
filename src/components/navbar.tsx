@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useAppContext } from "@/components/stateWrapper";
-import mbCart from "../.././public/img/mb-cart.svg";
 import React from "react";
 import { Links } from "@/types";
+import { TiShoppingCart } from "react-icons/ti";
 
 const links: Links[] = [
   {
@@ -48,13 +47,13 @@ export default function Navbar() {
 
         <div className="flex w-[80px] items-center justify-center rounded-[20px] border-[2px] border-primary-1 bg-white shadow-nav-shadow">
           <Link href="#" onClick={handleClickCart}>
-            <div className="flex h-[80px] w-[80px] items-center justify-center select-none">
+            <div className="flex h-[80px] w-[80px] select-none items-center justify-center">
               <div className="absolute right-[-5px] top-[-5px] flex h-[25px] w-[25px] items-center justify-center rounded-full bg-primary-1">
                 <span className="text-[1.4rem] font-medium text-white">
                   {cart.getNumberOfItems()}
                 </span>
               </div>
-              <Image height={40} width={40} src={mbCart} alt="shopping cart" />
+              <TiShoppingCart className="h-[40px] w-[40px] text-primary-1" />
             </div>
           </Link>
         </div>
