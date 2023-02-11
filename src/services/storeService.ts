@@ -12,7 +12,6 @@ export async function getItems() {
   try {
     const request = await instance.get("/products");
     const items = await request.data;
-    console.log(items.results);
     return items.results;
   } catch (err) {
     console.error("Error capturado", err);

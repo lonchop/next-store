@@ -44,8 +44,8 @@ export default function Product({
           </div>
 
           <div className="flex w-full flex-col justify-center gap-[15px] lg:w-[50%]">
-            <div className="flex justify-center mx-[20px] lg:mx-0">
-              <h2 className="text-center text-[2.0rem] font-semibold lg:text-left lg:text-[3.2rem] lg:font-normal">
+            <div className="mx-[20px] flex justify-center lg:mx-0 lg:justify-start">
+              <h2 className="text-center text-[2.0rem] font-semibold lg:text-[3.2rem] lg:font-normal lg:text-left">
                 {item.name}
               </h2>
             </div>
@@ -58,7 +58,7 @@ export default function Product({
                 height={600}
               />
             </div>
-            <div className="flex flex-col items-center justify-center lg:justify-start lg:items-start mx-[20px] lg:mx-0">
+            <div className="mx-[20px] flex flex-col items-center justify-center lg:mx-0 lg:items-start lg:justify-start">
               <p className="my-[10px] text-[2.5rem]">${item.price}</p>
               <p className="text-[1.4rem]">{item.description}</p>
             </div>

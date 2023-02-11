@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
-import { Context, Item } from "@/types"
+import { Context, Item } from "@/types";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 const AppContext = createContext<Context>({
   isOpen: true,
@@ -12,13 +13,16 @@ const AppContext = createContext<Context>({
   getNumberOfItems: () => 0,
 });
 
+// const [items, setItems] = useState<Array<Item>>([]);
+
 export default function StateWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [items, setItems] = useState<Array<Item>>([]);
+
+  const [items, setItems] = useLocalStorage<string, Array<Item>>("items", []);
 
   function handleOpenCart() {
     setIsOpen(true);

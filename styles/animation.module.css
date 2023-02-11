@@ -1,6 +1,6 @@
 .slideInLeft {
   animation-name: slideInLeft;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: both;
 }
 
@@ -17,10 +17,10 @@
 
 .slideOutLeft {
   animation-name: slideOutLeft;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: both;
   visibility: visible;
-  transition: visibility 1s;
+  transition: visibility 0.5s;
 }
 
 @keyframes slideOutLeft {
