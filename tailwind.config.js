@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       boxShadow: {
         "nav-shadow": "0 0 20px rgba(0, 0, 0, 0.10)",
+        "dark-shadow": "0 0 20px rgba(255, 255, 255, 0.20)"
       },
       backgroundImage: {
         "banner-1":

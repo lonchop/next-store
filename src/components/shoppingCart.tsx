@@ -20,7 +20,9 @@ export default function ShoppingCart() {
 
   return (
     <div
-      className={`fixed top-0 left-0 z-[2] h-full w-full flex-col items-end overflow-y-scroll bg-white py-[30px] px-[20px] shadow-nav-shadow lg:w-[350px] ${
+      className={`fixed top-0 left-0 z-[2] h-full w-full flex-col items-end overflow-y-scroll ${
+        cart.darkMode ? "bg-black text-white" : "bg-white text-black"
+      } py-[30px] px-[20px] shadow-nav-shadow lg:w-[350px] ${
         cart.isOpen
           ? `flex ${styles.slideInLeft}`
           : `hidden ${styles.slideOutLeft}`

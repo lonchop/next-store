@@ -31,6 +31,8 @@ interface Item extends Items {
 }
 
 interface Context {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
   isOpen: boolean;
   items: Item[];
   openCart: () => void;

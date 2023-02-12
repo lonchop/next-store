@@ -32,8 +32,12 @@ export default function Product({
   switch (showAs) {
     case "Page":
       return (
-        <div className="flex h-auto w-full flex-wrap bg-white lg:px-[50px]">
-          <div className="hidden w-full select-none justify-center lg:flex lg:w-[50%] lg:items-start">
+        <div
+          className={`flex h-full w-full flex-wrap ${
+            cart.darkMode ? "bg-black text-white" : "bg-white text-black"
+          }  lg:px-[50px]`}
+        >
+          <div className="hidden select-none justify-center lg:flex lg:w-[50%] lg:items-start lg:h-screen">
             <Image
               className="lg:h-[380px] lg:w-[380px]"
               src={item.image}
@@ -43,9 +47,9 @@ export default function Product({
             />
           </div>
 
-          <div className="flex w-full flex-col justify-center gap-[15px] lg:w-[50%]">
+          <div className="flex h-full w-full flex-col justify-center gap-[15px] lg:w-[50%]">
             <div className="mx-[20px] flex justify-center lg:mx-0 lg:justify-start">
-              <h2 className="text-center text-[2.0rem] font-semibold lg:text-[3.2rem] lg:font-normal lg:text-left">
+              <h2 className="text-center text-[2.0rem] font-semibold lg:text-left lg:text-[3.2rem] lg:font-normal">
                 {item.name}
               </h2>
             </div>
@@ -71,10 +75,12 @@ export default function Product({
     case "ListItem":
       return (
         <div className={`flex flex-col items-center`}>
-          <div className="w-[150px] bg-white">
+          <div
+            className={`w-[150px] ${cart.darkMode ? "bg-black text-white" : "bg-white text-black"} `}
+          >
             <div className="mb-[10px] flex h-[150px] select-none items-center justify-center rounded-[6px] shadow-nav-shadow">
               <Image
-                className="h-[80px] w-[80px]"
+                className="h-[80px] w-[80px] rounded-[2px]"
                 src={item.image}
                 alt="Picture of the author"
                 width={100}
@@ -115,11 +121,17 @@ export default function Product({
       );
     default:
       return (
-        <div className="mb-[60px] w-[300px] bg-white lg:mb-[20px]">
-          <div className="mb-[10px] flex h-[300px] select-none items-center justify-center rounded-[6px] shadow-nav-shadow">
+        <div
+          className={`mb-[60px] w-[300px] ${
+            cart.darkMode ? "bg-black text-white" : "bg-white text-black"
+          } lg:mb-[20px]`}
+        >
+          <div
+            className={`mb-[10px] flex h-[300px] select-none items-center justify-center rounded-[6px] shadow-nav-shadow`}
+          >
             <Link href={`/store/${convertToPath(item.name)}`}>
               <Image
-                className="h-[250px] w-[250px]"
+                className="h-[250px] w-[250px] rounded-[4px]"
                 src={item.image}
                 alt="Picture of the author"
                 width={400}

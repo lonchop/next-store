@@ -3,6 +3,8 @@ import { Context, Item } from "@/types";
 import useLocalStorage from "@/hooks/useLocalStorage";
 
 const AppContext = createContext<Context>({
+  darkMode: false,
+  toggleDarkMode: () => {},
   isOpen: true,
   items: [],
   openCart: () => {},
@@ -20,6 +22,13 @@ export default function StateWrapper({
 }: {
   children: React.ReactNode;
 }) {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  function toggleDarkMode() {
+    setDarkMode(!darkMode);
+    console.log(darkMode);
+  }
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const [items, setItems] = useLocalStorage<string, Array<Item>>("items", []);
@@ -72,6 +81,8 @@ export default function StateWrapper({
   return (
     <AppContext.Provider
       value={{
+        darkMode,
+        toggleDarkMode,
         items,
         isOpen,
         openCart: handleOpenCart,
