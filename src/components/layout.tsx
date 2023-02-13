@@ -29,9 +29,9 @@ export default function Layout({
       <div
         className={`${font.className} ${
           darkMode
-            ? "bg-black transition-all duration-300 ease-in-out "
-            : "bg-white transition-all duration-300 ease-in-out "
-        } `}
+            ? "bg-black transition-all duration-300 ease-in-out"
+            : "bg-white transition-all duration-300 ease-in-out"
+        }`}
       >
         <Navbar />
         <div className="mx-auto flex w-full flex-col items-center">
