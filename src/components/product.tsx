@@ -86,7 +86,7 @@ export default function Product({
           >
             <div className="mb-[10px] flex h-[150px] select-none items-center justify-center rounded-[6px] shadow-nav-shadow">
               <Image
-                className="h-[80px] w-[80px] rounded-[2px]"
+                className="h-[100px] w-[100px] rounded-[2px]"
                 src={item.image}
                 alt="Picture of the author"
                 width={100}

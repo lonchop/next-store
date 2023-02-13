@@ -36,7 +36,7 @@ export default function Navbar() {
           : "bg-white transition-all duration-300 ease-in-out "
       } `}
     >
-      <nav className="fixed z-[1] flex w-[90%] gap-[20px]">
+      <nav className="fixed z-[1] flex h-[70px] w-[95%] gap-[10px] lg:h-auto lg:w-[90%] lg:gap-[20px]">
         {/* Toggle Button */}
         <ToggleButton />
 
@@ -56,9 +56,9 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex w-[80px] items-center justify-center rounded-[20px] border-[2px] border-primary-1 bg-white shadow-nav-shadow">
+        <div className="flex w-[70px] items-center justify-center rounded-[20px] border-[2px] border-primary-1 bg-white shadow-nav-shadow lg:w-[80px]">
           <Link href="#" onClick={handleClickCart}>
-            <div className="flex h-[80px] w-[80px] select-none items-center justify-center">
+            <div className="flex h-[70px] w-[80px] select-none items-center justify-center lg:h-[80px]">
               <div className="absolute right-[-5px] top-[-5px] flex h-[25px] w-[25px] items-center justify-center rounded-full bg-primary-1">
                 <span className="text-[1.4rem] font-medium text-white">
                   {cart.getNumberOfItems()}

@@ -20,14 +20,12 @@ export default function ShoppingCart() {
 
   return (
     <div
-      className={`fixed top-0 left-0 z-[2] h-full w-full flex-col items-end overflow-y-scroll ${
+      className={`fixed top-0 right-0 z-[2] h-full w-full flex-col items-end overflow-y-scroll ${
         cart.darkMode
           ? "bg-black text-white transition-all duration-300 ease-in-out "
           : "bg-white text-black transition-all duration-300 ease-in-out "
       } py-[30px] px-[20px] shadow-nav-shadow lg:w-[350px] ${
-        cart.isOpen
-          ? `flex ${styles.slideInLeft}`
-          : `hidden ${styles.slideOutLeft}`
+        cart.isOpen ? `flex ${styles.slideInRight}` : `hidden`
       }
       }`}
     >
