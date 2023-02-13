@@ -2,7 +2,7 @@ import Head from "next/head";
 import Navbar from "@/components/navbar";
 import ShoppingCart from "@/components/shoppingCart";
 import { Poppins } from "@next/font/google";
-import { useAppContext } from "@/components/stateWrapper";
+import { useAppContext } from "@/context/stateWrapper";
 
 const font = Poppins({
   weight: ["400", "500", "700"],
@@ -27,7 +27,11 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className={`${font.className} ${darkMode ? "bg-black" : "bg-white"} `}
+        className={`${font.className} ${
+          darkMode
+            ? "bg-black transition-all duration-300 ease-in-out "
+            : "bg-white transition-all duration-300 ease-in-out "
+        } `}
       >
         <Navbar />
         <div className="mx-auto flex w-full flex-col items-center">

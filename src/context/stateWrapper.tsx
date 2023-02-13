@@ -15,18 +15,18 @@ const AppContext = createContext<Context>({
   getNumberOfItems: () => 0,
 });
 
-// const [items, setItems] = useState<Array<Item>>([]);
-
 export default function StateWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useLocalStorage<string, boolean>(
+    "darkMode",
+    false
+  );
 
   function toggleDarkMode() {
     setDarkMode(!darkMode);
-    console.log(darkMode);
   }
 
   const [isOpen, setIsOpen] = useState<boolean>(false);

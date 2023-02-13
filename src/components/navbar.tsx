@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useAppContext } from "@/components/stateWrapper";
+import { useAppContext } from "@/context/stateWrapper";
 import React from "react";
 import { Links } from "@/types";
 import { TiShoppingCart } from "react-icons/ti";
@@ -30,8 +30,11 @@ export default function Navbar() {
 
   return (
     <div
-      className={`mx-auto pt-[30px] mb-[60px] flex h-[80px] w-[90%] justify-center ${
-        cart.darkMode ? "bg-black" : "bg-white"} `}
+      className={`mx-auto mb-[60px] flex h-[80px] w-[90%] justify-center pt-[30px] ${
+        cart.darkMode
+          ? "bg-black transition-all duration-300 ease-in-out "
+          : "bg-white transition-all duration-300 ease-in-out "
+      } `}
     >
       <nav className="fixed z-[1] flex w-[90%] gap-[20px]">
         {/* Toggle Button */}

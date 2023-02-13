@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { convertToPath } from "@/lib/utils";
-import { useAppContext } from "@/components/stateWrapper";
+import { useAppContext } from "@/context/stateWrapper";
 import ButtonAddCart from "@/components/buttonAddCart";
 import ButtonRemoveCart from "./buttonRemoveCart";
 import { Item } from "@/types";
@@ -34,10 +34,12 @@ export default function Product({
       return (
         <div
           className={`flex h-full w-full flex-wrap ${
-            cart.darkMode ? "bg-black text-white" : "bg-white text-black"
+            cart.darkMode
+              ? "bg-black text-white transition-all duration-300 ease-in-out "
+              : "bg-white text-black transition-all duration-300 ease-in-out "
           }  lg:px-[50px]`}
         >
-          <div className="hidden select-none justify-center lg:flex lg:w-[50%] lg:items-start lg:h-screen">
+          <div className="hidden select-none justify-center lg:flex lg:h-screen lg:w-[50%] lg:items-start">
             <Image
               className="lg:h-[380px] lg:w-[380px]"
               src={item.image}
@@ -76,7 +78,11 @@ export default function Product({
       return (
         <div className={`flex flex-col items-center`}>
           <div
-            className={`w-[150px] ${cart.darkMode ? "bg-black text-white" : "bg-white text-black"} `}
+            className={`w-[150px] ${
+              cart.darkMode
+                ? "bg-black text-white transition-all duration-300 ease-in-out "
+                : "bg-white text-black transition-all duration-300 ease-in-out"
+            } `}
           >
             <div className="mb-[10px] flex h-[150px] select-none items-center justify-center rounded-[6px] shadow-nav-shadow">
               <Image
@@ -123,7 +129,9 @@ export default function Product({
       return (
         <div
           className={`mb-[60px] w-[300px] ${
-            cart.darkMode ? "bg-black text-white" : "bg-white text-black"
+            cart.darkMode
+              ? "bg-black text-white transition-all duration-300 ease-in-out"
+              : "bg-white text-black transition-all duration-300 ease-in-out"
           } lg:mb-[20px]`}
         >
           <div

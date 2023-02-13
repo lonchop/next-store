@@ -32,17 +32,6 @@ function useLocalStorage<TKey extends string, TValue>(
     setStoredValue(value);
   };
 
-  // const setValue = (value: TValue) => {
-  //   if (typeof window !== "undefined") {
-  //     try {
-  //       setStoredValue(value);
-  //       window.localStorage.setItem(key, JSON.stringify(value));
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-  // };
-
   return [storedValue, setValue];
 }
 

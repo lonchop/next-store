@@ -4,7 +4,7 @@ import Carousel from "@/components/carousel";
 import { useQuery } from "react-query";
 import { getItems } from "@/services/storeService";
 import { Items } from "@/types";
-import { useAppContext } from "@/components/stateWrapper";
+import { useAppContext } from "@/context/stateWrapper";
 
 export default function Home() {
   const cart = useAppContext();
@@ -19,7 +19,9 @@ export default function Home() {
 
       <h3
         className={`mb-[10px] text-[2rem] font-medium ${
-          cart.darkMode ? "text-white" : "text-black"
+          cart.darkMode
+            ? "text-white transition-all duration-300 ease-in-out "
+            : "text-black transition-all duration-300 ease-in-out "
         }`}
       >
         Latest Products

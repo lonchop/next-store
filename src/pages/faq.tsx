@@ -1,5 +1,5 @@
 import Layout from "@/components/layout";
-import { useAppContext } from "@/components/stateWrapper";
+import { useAppContext } from "@/context/stateWrapper";
 
 export default function FAQ() {
   const { darkMode } = useAppContext();
@@ -8,7 +8,9 @@ export default function FAQ() {
     <Layout title="FAQ">
       <div
         className={`mb-[30px] h-auto w-full px-[20px] lg:w-[80ch] lg:px-0 ${
-          darkMode ? "text-white" : "text-black"
+          darkMode
+            ? "text-white transition-all duration-300 ease-in-out "
+            : "text-black transition-all duration-300 ease-in-out "
         }`}
       >
         <h2 className="text-[4rem] font-bold">FAQ</h2>

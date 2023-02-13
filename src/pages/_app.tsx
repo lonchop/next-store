@@ -1,4 +1,4 @@
-import StateWrapper from "@/components/stateWrapper";
+import StateWrapper from "@/context/stateWrapper";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import "../../styles/globals.css";

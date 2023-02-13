@@ -1,5 +1,5 @@
 import Product from "@/components/product";
-import { useAppContext } from "@/components/stateWrapper";
+import { useAppContext } from "@/context/stateWrapper";
 import styles from "../../styles/animation.module.css";
 import { Context } from "@/types";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
@@ -21,7 +21,9 @@ export default function ShoppingCart() {
   return (
     <div
       className={`fixed top-0 left-0 z-[2] h-full w-full flex-col items-end overflow-y-scroll ${
-        cart.darkMode ? "bg-black text-white" : "bg-white text-black"
+        cart.darkMode
+          ? "bg-black text-white transition-all duration-300 ease-in-out "
+          : "bg-white text-black transition-all duration-300 ease-in-out "
       } py-[30px] px-[20px] shadow-nav-shadow lg:w-[350px] ${
         cart.isOpen
           ? `flex ${styles.slideInLeft}`
